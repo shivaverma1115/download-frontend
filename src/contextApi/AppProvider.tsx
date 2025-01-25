@@ -1,7 +1,6 @@
 "use client";
 import React, { createContext, useState } from "react";
 import { AppContextType, IUser } from "@/interface/interFace";
-import { useRouter } from "next/navigation";
 
 export const AppContext = createContext<AppContextType | undefined>(undefined);
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
