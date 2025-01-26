@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
 
@@ -54,8 +55,18 @@ const SocialDownload = () => {
         }
     };
 
+    const handleTest = () => {
+        axios.get(
+            `${process.env.NEXT_PUBLIC_BACKEND_URL}download/test`
+        )
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err))
+    }
     return (
         <>
+            <Button onClick={() => handleTest()} >
+                Test Me
+            </Button>
             <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-teal-400 to-blue-600">
                 <div className="bg-white p-8 rounded-md shadow-lg w-11/12 max-w-md text-center">
                     <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-600">
