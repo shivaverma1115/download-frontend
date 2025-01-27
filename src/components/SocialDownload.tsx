@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+
 import axios from "axios";
 import { useState } from "react";
 
@@ -51,22 +51,49 @@ const SocialDownload = () => {
             setErrorMessage("Failed to download the video. Please try again.");
         } finally {
             setLoading(false);
-            setVideoUrl("");
+            // setVideoUrl("");
         }
     };
 
-    const handleTest = () => {
-        axios.get(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}download/test`
-        )
-            .then((res) => console.log(res))
-            .catch((err) => console.log(err))
-    }
+    // const handleTest = () => {
+    //     // axios.get(
+    //     //     `${process.env.NEXT_PUBLIC_BACKEND_URL}download/test`
+    //     // )
+    //     //     .then((res) => console.log(res))
+    //     //     .catch((err) => console.log(err))
+
+    //     const blobUrl = "blob:https://www.instagram.com/6d2ec890-c072-4bd8-a14d-a4dd30b322f5";
+
+    //     fetch(blobUrl)
+    //         .then((response) => response.blob())
+    //         .then((blob) => {
+    //             const a = document.createElement('a');
+    //             const url = window.URL.createObjectURL(blob);
+    //             a.href = url;
+    //             a.download = 'instagram-video.mp4'; // Specify the filename
+    //             document.body.appendChild(a);
+    //             a.click();
+    //             a.remove();
+    //             window.URL.revokeObjectURL(url);
+    //         })
+    //         .catch((err) => console.error('Error downloading blob:', err));
+
+    // }
     return (
         <>
-            <Button onClick={() => handleTest()} >
+            {/* <Button onClick={() => handleTest()} >
                 Test Me
-            </Button>
+            </Button> */}
+            {/* <Image alt="" src={'https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/474556241_17994709100753426_2098602899948071181_n.jpg?stp=dst-jpg_e15_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi42MzJ4MTEyNC5zZHIuZjc1NzYxLmRlZmF1bHRfY292ZXJfZnJhbWUifQ&_nc_ht=instagram.fdel8-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=ijQr4QC2uOYQ7kNvgFq7ngR&_nc_gid=20458abb3e6e4b0c8ae526acab4f38be&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzU1MjUyNjQ1MDkyODcyNzA5Nw%3D%3D.3-ccb7-5&oh=00_AYAoGWCOgZegFTWbOXdNJwNybOA45Qtd5z7IsM2kM29WVA&oe=679C224D&_nc_sid=10d13b'} width='100' height={'100'} /> */}
+
+            {/* <video
+                className="x1lliihq x5yr21d xh8yej3"
+                playsInline
+                preload="none"
+                src="https://instagram.fdel8-2.fna.fbcdn.net/o1/v/t16/f2/m69/AQOUnopew-D55mJG3aY8BlC4B6XPvyg656dOQMjXWUIBjNnXeKNCiPiiSNRGRih4BG3DrT3JNwnq7nzkKddvGoYV.mp4?efg=eyJ4cHZfYXNzZXRfaWQiOjIwMzU1MTQ2NTAyNDQ4MjIsInZlbmNvZGVfdGFnIjoieHB2X3Byb2dyZXNzaXZlLklOU1RBR1JBTS5DTElQUy5DMy4zNjAuZGFzaF9oMjY0LWJhc2ljLWdlbjJfMzYwcCJ9&_nc_ht=instagram.fdel8-2.fna.fbcdn.net&_nc_cat=105&strext=1&vs=c2f56b303faea277&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HRDByVGh6ekhWeDZqNm9FQUxCaFVxYkZwQmdHYm1kakFBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dKU2xUaHlnWkx5WXZlb0dBSzBjalFFYTVFZ25idjRHQUFBRhUCAsgBACgAGAAbAogHdXNlX29pbAExEnByb2dyZXNzaXZlX3JlY2lwZQExFQAAJqzbzfrF0p0HFQIoAkMzLBdAQuqfvnbItBgZZGFzaF9oMjY0LWJhc2ljLWdlbjJfMzYwcBEAdf4HAA&ccb=9-4&oh=00_AYBkH7v2qiO6VShCDjEaRdfv9iA16iteyXNlU7FQ1fxGOA&oe=67982EFE&_nc_sid=1d576d"
+                style={{ display: 'block' }}
+                controls // Add controls if you want to enable play/pause functionality
+            /> */}
             <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-teal-400 to-blue-600">
                 <div className="bg-white p-8 rounded-md shadow-lg w-11/12 max-w-md text-center">
                     <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-600">

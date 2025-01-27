@@ -30,3 +30,9 @@ export interface Task {
     description: string;
     status: "Pending" | "Completed" | "Done";
 };
+
+// export interface ISocialDownload {
+//     url: string;
+//     thumbnail: string;
+//     wm: string;
+// }
